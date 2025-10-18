@@ -32,8 +32,8 @@ if (fs.existsSync(nextServerApp)) {
   copyDir(nextServerApp, outDir);
 }
 
-// copy static assets
-copyDir(nextStatic, path.join(outDir, "_next"));
+// copy static assets to out/_next/static
+copyDir(nextStatic, path.join(outDir, "_next", "static"));
 // Copy public assets (images, favicon, etc)
 if (fs.existsSync(publicDir)) {
   copyDir(publicDir, outDir);
